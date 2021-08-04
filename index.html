@@ -2,6 +2,8 @@
 <html>
 
 <head>
+	<!--last updated at 5:20pm -->
+	
 <title>Homework 4</title>
 <link rel="stylesheet" href="style.css"> 
 
@@ -28,7 +30,6 @@
 <p style="text-align: center; color: mediumblue;" >Map of Houston TIRZ by Study Area Size</p>
 
 <div id = "map">
-	//last updated @12:45
 
 	<script>
 		var map = L.map('map').setView([29.7499, -95.3584], 13);
@@ -49,8 +50,8 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 			return new L.CircleMarker (latlng, 
 			{ radius: 3, 
 				fillOpacity:1,
-				fillcolor:areaColor
-				color: 'green'
+				fillcolor:areaColor,
+				color: 'green',
 				weight: .5,
 			});
 		}, 
