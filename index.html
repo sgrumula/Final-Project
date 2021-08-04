@@ -37,7 +37,7 @@
 	attribution: 'Map tiles by <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	minZoom: 0,
 	maxZoom: 18,
-});.addto(map);
+}).addto(map);
 
 $.getJSON("Houston_TIRZ.geojson",function(data){
 	L.geoJSON(data, {
