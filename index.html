@@ -23,15 +23,15 @@
 
 <body>
 	<div>
-		<h1 style="color: navy;text-align: center;" >Houston TIRZs</h1>
+		<h1 style="color: mediumblue;text-align: center;" >Houston TIRZs</h1>
 	</div>
-		<h2 style="color: mediumblue;text-align: center; size: 7;" >465 Web Mapping August 2, 2021</h2>
+		<h2 style="color: navy;text-align: center;size: 7;" >465 Web Mapping August 2, 2021</h2>
 
-<p style="text-align: center; color: darkgrey;" >Map of Houston tax increment reinvestment zones TIRZ by study area size.
+<p style="text-align: center; color: black;" >Map of Houston tax increment reinvestment zones TIRZ by study area size.
 	TIRZs are special zones created by City Council to attract new investment in the area.
 	</p>
 	
-<p style="text-align: center; color: darkgrey;" >In the map below dark blue represents smaller area size and light blue indicates large TIRZs.
+<p style="text-align: center; color: black;" >In the map below dark blue represents smaller area size and light blue indicates large TIRZs.
 	</p>
 
 <div id = "map">
@@ -51,7 +51,7 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 			var areaColor;
 			var areaServed = feature.properties.ShapeSTAre;
 				if ( areaServed <= 42000000.0 ) areaColor = "blue";
-				else areaColor = "lightblue";
+				else areaColor = "salmon";
 				return {
 				fillColor:areaColor,
 				color: 'darkgrey',
