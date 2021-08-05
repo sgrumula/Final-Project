@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<!--last updated at 10:54am -->
+	<!--last updated at 1:20 pm -->
 	
 <title>Homework 4</title>
 <link rel="stylesheet" href="style.css"> 
@@ -23,11 +23,11 @@
 
 <body>
 	<div>
-		<h1 style="color: mediumslateblue;text-align: center;" >Houston TIRZs</h1>
+		<h1 style="color: mediumblue;text-align: center;" >Houston TIRZs</h1>
 	</div>
-		<h2 style="color: mediumblue;text-align: center; size: 10;" >465 Web Mapping August 2, 2021</h2>
+		<h2 style="color: mediumlateblue;text-align: center; size: 10;" >465 Web Mapping August 2, 2021</h2>
 
-<p style="text-align: center; color: slateblue;" >Map of Houston tax increment reinvestment zones TIRZ by study area size.
+<p style="text-align: center; color: lightgreen;" >Map of Houston tax increment reinvestment zones TIRZ by study area size.
 	TIRZs are special zones created by City Council to attract new investment in the area.
 	The zones help finance costs and encourage new developments that improve the nearby communities.</p>
 
@@ -47,11 +47,11 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 		style: function(feature) {
 			var areaColor;
 			var areaServed = feature.properties.ShapeSTAre;
-				if ( areaServed <= 35000000.0 ) areaColor = "blue";
-				else areaColor = "lightgreen";
+				if ( areaServed <= 40000000.0 ) areaColor = "blue";
+				else areaColor = "lightblue";
 				return {
 				fillColor:areaColor,
-				color: 'black',
+				color: 'darkgrey',
 				fillOpacity: 0.8,
 			};
 		}, 
