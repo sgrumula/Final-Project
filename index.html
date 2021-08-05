@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<!--last updated at 7:29pm -->
+	<!--last updated at 7:34pm -->
 	
 <title>Homework 4</title>
 <link rel="stylesheet" href="style.css"> 
@@ -49,12 +49,11 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 			var areaServed = feature.properties.ShapeSTAre;
 				if (areaServed <= 13000) areaColor = "blue";
 				else areaColor = "orange";
-				return new L.CircleMarker (latlng, 
-			{ radius: 3, 
+				return 
+			{ 
 				fillOpacity:1,
 				fillcolor:areaColor,
-				color: 'green',
-				weight: .5,
+				color: 'black',
 			});
 		}, 
 		onEachFeature: function(feature,layer){
