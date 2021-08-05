@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<!--last updated at 9:20am -->
+	<!--last updated at 9:26am -->
 	
 <title>Homework 4</title>
 <link rel="stylesheet" href="style.css"> 
@@ -47,7 +47,7 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 		style: function(feature) {
 			var areaColor;
 			var areaServed = feature.properties.ShapeSTAre;
-				if ( areaServed <= 13000 ) areaColor = "blue";
+				if ( areaServed <= 3000 ) areaColor = "blue";
 				else areaColor = "green";
 				return {
 				fillColor:areaColor,
