@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<!--last updated at 7:46pm -->
+	<!--last updated at 7:52pm -->
 	
 <title>Homework 4</title>
 <link rel="stylesheet" href="style.css"> 
@@ -54,10 +54,10 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 				fillOpacity: 1,
 				fillColor:areaColor,
 				color: 'black',
-			});
+			};
 		}, 
-		onEachFeature: function(feature,layer){
-			layer.bindpopup("<Houston TIRZ>" + feature.properities.NAME)
+		onEachFeature: function( feature, layer ){
+			layer.bindPopup("<Houston TIRZ>" + feature.properties.NAME)
 
 		}
 
