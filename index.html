@@ -51,11 +51,11 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 			var areaColor;
 			var areaServed = feature.properties.ShapeSTAre;
 				if ( areaServed <= 42000000.0 ) areaColor = "cyan";
-				else areaColor = "darkgreen";
+				else areaColor = "green";
 				return {
 				fillColor:areaColor,
 				color: 'darkgrey',
-				fillOpacity: 08,
+				fillOpacity: 0.8,
 			};
 		}, 
 		onEachFeature: function( feature, layer ){
