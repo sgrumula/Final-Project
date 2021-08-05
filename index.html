@@ -40,16 +40,16 @@
 	attribution: 'Map tiles by <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	minZoom: 0,
 	maxZoom: 18,
-}).addto(map);
+}).addTo(map);
 
 $.getJSON("Houston_TIRZ.geojson",function(data){
 	L.geoJSON(data, {
-		pointTolayer: function(feature, Latlng) {
+		style: function(feature) {
 			var areaColor;
-			var areaServed = feature.properties.shape_area;
-			if (areaServed <= 13000) areaColor = "blue";
-			else areaColor = "orange";
-			return new L.CircleMarker (latlng, 
+			var areaServed = feature.properties.ShapeSTAre;
+				if (areaServed <= 13000) areaColor = "blue";
+				else areaColor = "orange";
+				return new L.CircleMarker (latlng, 
 			{ radius: 3, 
 				fillOpacity:1,
 				fillcolor:areaColor,
@@ -58,11 +58,11 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 			});
 		}, 
 		onEachFeature: function(feature,layer){
-			layer.bindpopup("<Houston TIRZ>" + feature.properities.Name)
+			layer.bindpopup("<Houston TIRZ>" + feature.properities.NAME)
 
 		}
 
-	}).addto(map);
+	}).addTo(map);
 
 			});
 		
