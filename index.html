@@ -47,7 +47,7 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 		style: function(feature) {
 			var areaColor;
 			var areaServed = feature.properties.ShapeSTAre;
-				if ( areaServed <= 3000 ) areaColor = "blue";
+				if ( areaServed <= 13000000.0 ) areaColor = "blue";
 				else areaColor = "green";
 				return {
 				fillColor:areaColor,
