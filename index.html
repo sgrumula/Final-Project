@@ -47,12 +47,12 @@ $.getJSON("Houston_TIRZ.geojson",function(data){
 		style: function(feature) {
 			var areaColor;
 			var areaServed = feature.properties.ShapeSTAre;
-				if ( areaServed <= 30000000.0 ) areaColor = "lightblue";
+				if ( areaServed <= 35000000.0 ) areaColor = "blue";
 				else areaColor = "lightgreen";
 				return {
 				fillColor:areaColor,
-				color: 'grey',
-				fillOpacity: 1.0,
+				color: 'lightgrey',
+				fillOpacity: 0.4,
 			};
 		}, 
 		onEachFeature: function( feature, layer ){
